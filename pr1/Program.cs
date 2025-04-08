@@ -31,5 +31,18 @@ class Program
         double double_1 = double.Parse(string_7.Substring(0, 1));
         double double_2 = double.Parse(string_7.Substring(1, 1));
         Console.WriteLine($"Sum:{double_1 + double_2}\nUmn:{double_1 * double_2}");
+
+        string int_1 = Console.ReadLine();
+        string int_2 = Console.ReadLine();
+        int A = int.Parse(int_1);
+        int B = int.Parse(int_2);
+        if (A > 2 && B <= 3)
+        {
+            Console.WriteLine("it is true");
+        }
+        else
+        {
+            Console.WriteLine("it is false");
+        }
     }
 }
