@@ -1,6 +1,8 @@
 ﻿using System;
 class Program
 {
+    const double pi = 3.14;
+    const double radius = 5.0;
     static void Main()
     {
         string Mark = "Toyota";
@@ -9,5 +11,6 @@ class Program
         bool is_crached = false;
 
         Console.WriteLine($"Mark:{Mark}\nModel:{Model}\nEngine capacity:{Engine_capacity}\nIs it crashed? {is_crached}");
+        Console.WriteLine($"Area of the circle is {pi * (radius * radius)}");
     }
 }
