@@ -17,5 +17,14 @@ class Program
         string age = Console.ReadLine();
         string color = Console.ReadLine();
         Console.WriteLine($"Hello, {name}! Your age is {age}. Your favourite color is {color}");
+
+        int int_literal = 42;
+        double double_literal = 4.2;
+        char char_literal = 'a';
+        string string_literal = "string";
+        bool bool_literal = false;
+        Console.WriteLine($"int literal:{int_literal}, data type:{int_literal.GetType()}\ndouble literal:{double_literal}, data type:{double_literal.GetType()}\n" +
+            $"char literal:{char_literal}, data type:{char_literal.GetType()}\nsrting literal:{string_literal}, data type:{string_literal.GetType()}\n" +
+            $"bool literal:{bool_literal}, data type:{bool_literal.GetType()}");
     }
 }
