@@ -21,5 +21,17 @@ namespace Tests
         {
             Assert.Fail();
         }
+
+        [TestMethod()]
+        public void SignInTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void MainTest2()
+        {
+            Assert.Fail();
+        }
     }
 }
