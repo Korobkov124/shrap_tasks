@@ -3,6 +3,22 @@ class Program
 {
     const double pi = 3.14;
     const double radius = 5.0;
+
+    static int SignIn(int x)
+    {
+        if (x < 0)
+        {
+            return -1;
+        }
+        else if (x == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
     static void Main()
     {
         string Mark = "Toyota";
@@ -129,6 +145,10 @@ class Program
             result2 += arr2[i];
             Console.WriteLine(arr2[i]);
         }
-        Console.WriteLine($"Result of sum of this array is {result2}");        
+        Console.WriteLine($"Result of sum of this array is {result2}");
+
+        int rand_int1 = rand.Next(-1, 1);
+        int rand_int2 = rand.Next(-1, 1);
+        Console.WriteLine($"Result: {SignIn(rand_int1) + SignIn(rand_int2)}");
     }
 }
