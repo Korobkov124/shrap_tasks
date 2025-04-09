@@ -97,5 +97,28 @@ class Program
             result = result * i;
         }
         Console.WriteLine($"Result of umn with A and B is {result}");
+
+        int rand_3grade = rand.Next(1, 100);
+        int counter = 0;
+        while (rand_3grade > 1)
+        {
+            if(rand_3grade % 3 == 0) 
+            {
+                rand_3grade = rand_3grade / 3;
+                counter++;
+                continue;
+            }
+            else
+            {
+                Console.WriteLine($"{rand_3grade} is not the grade of 3!");
+                break;
+            }
+            if (rand_3grade / 3 == 1)
+            {
+                counter++;
+                Console.WriteLine($"{rand_3grade} is {counter}-th grade of 3 value");
+                rand_3grade = rand_3grade / 3;
+            }
+        }
     }
 }
