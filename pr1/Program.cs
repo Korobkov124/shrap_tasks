@@ -120,5 +120,15 @@ class Program
                 rand_3grade = rand_3grade / 3;
             }
         }
+
+        int[] arr2 = new int[5];
+        int result2 = 0;
+        for (int i = 0; i < 10; i++)
+        {
+            arr2[i] = rand.Next(-10, 10);
+            result2 += arr2[i];
+            Console.WriteLine(arr2[i]);
+        }
+        Console.WriteLine($"Result of sum of this array is {result2}");        
     }
 }
