@@ -86,5 +86,16 @@ class Program
                 break;
         }
         Console.WriteLine($"Random date of week is {day_of_week_string}");
+
+        string int_6 = Console.ReadLine();
+        int parsed_int_6 = int.Parse(int_6);
+        string int_7 = Console.ReadLine();
+        int parsed_int_7 = int.Parse(int_7);
+        int result = 1;
+        for(int i = parsed_int_6; i <= parsed_int_7; i++)
+        {
+            result = result * i;
+        }
+        Console.WriteLine($"Result of umn with A and B is {result}");
     }
 }
