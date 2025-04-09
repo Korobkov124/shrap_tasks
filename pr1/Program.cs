@@ -54,5 +54,37 @@ class Program
         int parsed_int_5 = int.Parse(int_5);
         int[] arr = { parsed_int_3, parsed_int_4, parsed_int_5 };
         Console.WriteLine($"Maximum of this array is: {arr.Max()}");
+
+        Random rand = new Random();
+        int day_of_week =  rand.Next(1, 7);
+        string day_of_week_string = "";
+        switch (day_of_week)
+        {
+            case 1:
+                day_of_week_string = "Monday";
+                break;
+            case 2:
+                day_of_week_string = "Tuesday";
+                break;
+            case 3:
+                day_of_week_string = "Wednesday";
+                break;
+            case 4:
+                day_of_week_string = "Thursday";
+                break;
+            case 5:
+                day_of_week_string = "Friday";
+                break;
+            case 6:
+                day_of_week_string = "Saturday";
+                break;
+            case 7:
+                day_of_week_string = "Sunday";
+                break;
+            default:
+                day_of_week_string = "Invalid Day";
+                break;
+        }
+        Console.WriteLine($"Random date of week is {day_of_week_string}");
     }
 }
