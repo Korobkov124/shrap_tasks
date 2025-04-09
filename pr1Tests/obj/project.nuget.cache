@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ijsgw+Xoe1Xhpz+8LCtQtdotX8qJaQGra7GL1ZneCsKsig902U3VDr74vYPKwQ65yuLv1zxhN7T/kDM2bYuqUg==",
+  "dgSpecHash": "7MWRT16EGVINFODRhDgVjcYvAmDPvEpAEvxKP3q89VcOKiaHKhxA6/kKcNxZxqlaQtoAmb4NSPvt2Q2KLmMFyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HONOR\\source\\pr1\\pr1Tests\\pr1Tests.csproj",
+  "projectFilePath": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HONOR\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\HONOR\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

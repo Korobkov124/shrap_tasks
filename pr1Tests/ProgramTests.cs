@@ -15,5 +15,11 @@ namespace Tests
         {
             Assert.Fail();
         }
+
+        [TestMethod()]
+        public void MainTest1()
+        {
+            Assert.Fail();
+        }
     }
 }
