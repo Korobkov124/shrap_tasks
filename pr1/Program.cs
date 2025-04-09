@@ -1,10 +1,10 @@
 ﻿using System;
-class Program
+public class Program
 {
     const double pi = 3.14;
     const double radius = 5.0;
 
-    static int SignIn(int x)
+    public static int SignIn(int x)
     {
         if (x < 0)
         {
@@ -19,7 +19,7 @@ class Program
             return 1;
         }
     }
-    static void Main()
+    public static void Main()
     {
         string Mark = "Toyota";
         string Model = "Mark 2";
@@ -72,7 +72,7 @@ class Program
         Console.WriteLine($"Maximum of this array is: {arr.Max()}");
 
         Random rand = new Random();
-        int day_of_week =  rand.Next(1, 7);
+        int day_of_week = rand.Next(1, 7);
         string day_of_week_string = "";
         switch (day_of_week)
         {
@@ -108,7 +108,7 @@ class Program
         string int_7 = Console.ReadLine();
         int parsed_int_7 = int.Parse(int_7);
         int result = 1;
-        for(int i = parsed_int_6; i <= parsed_int_7; i++)
+        for (int i = parsed_int_6; i <= parsed_int_7; i++)
         {
             result = result * i;
         }
@@ -118,7 +118,7 @@ class Program
         int counter = 0;
         while (rand_3grade > 1)
         {
-            if(rand_3grade % 3 == 0) 
+            if (rand_3grade % 3 == 0)
             {
                 rand_3grade = rand_3grade / 3;
                 counter++;
