@@ -44,5 +44,15 @@ class Program
         {
             Console.WriteLine("it is false");
         }
+
+
+        string int_3 = Console.ReadLine();
+        int parsed_int_3 = int.Parse(int_3);
+        string int_4 = Console.ReadLine();
+        int parsed_int_4 = int.Parse(int_4);
+        string int_5 = Console.ReadLine();
+        int parsed_int_5 = int.Parse(int_5);
+        int[] arr = { parsed_int_3, parsed_int_4, parsed_int_5 };
+        Console.WriteLine($"Maximum of this array is: {arr.Max()}");
     }
 }
