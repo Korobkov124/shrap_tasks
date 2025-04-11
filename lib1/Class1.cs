@@ -8,7 +8,7 @@
         /// <param name="firstTerm">Первое целое число для сложения.</param>
         /// <param name="secondTerm">Второе целое число для сложения.</param>
         /// <returns>Сумма первого и второго числа.</returns>
-        public double Add(int firstTerm, int secondTerm)
+        public static double Add(int firstTerm, int secondTerm)
         {
             return firstTerm + secondTerm;
         }
@@ -18,7 +18,7 @@
         /// <param name="firstTerm">Первое число для сложения.</param>
         /// <param name="secondTerm">Второе число для сложения.</param>
         /// <returns>Сумма первого и второго числа.</returns>
-        public double Add(double firstTerm, double secondTerm)
+        public static double Add(double firstTerm, double secondTerm)
         {
             return firstTerm + secondTerm;
         }
@@ -29,7 +29,7 @@
         /// <param name="secondTerm">Вторая строка, представляющая число.</param>
         /// <returns>Сумма двух чисел в виде числа с плавающей запятой.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если один из параметров не может быть преобразован в число.</exception>
-        public double Add(string firstTerm, string secondTerm)
+        public static double Add(string firstTerm, string secondTerm)
         {
             if (double.TryParse(firstTerm, out double firstNumber) && double.TryParse(secondTerm, out double secondNumber))
             {
@@ -47,7 +47,7 @@
         /// <param name="firstTerm">Первое целое число, от которого вычитается второе.</param>
         /// <param name="secondTerm">Второе целое число, которое вычитается из первого.</param>
         /// <returns>Результат вычитания второго числа из первого.</returns>
-        public double Substract(int firstTerm, int secondTerm)
+        public static double Substract(int firstTerm, int secondTerm)
         {
             return firstTerm - secondTerm;
         }
@@ -57,7 +57,7 @@
         /// <param name="firstTerm">Первое число, от которого вычитается второе.</param>
         /// <param name="secondTerm">Второе число, которое вычитается из первого.</param>
         /// <returns>Результат вычитания второго числа из первого.</returns>
-        public double Substract(double firstTerm, double secondTerm)
+        public static double Substract(double firstTerm, double secondTerm)
         {
             return firstTerm - secondTerm;
         }
@@ -68,7 +68,7 @@
         /// <param name="secondTerm"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public double Substract(string firstTerm, string secondTerm)
+        public static double Substract(string firstTerm, string secondTerm)
         {
             if (double.TryParse(firstTerm, out double firstNumber) && double.TryParse(secondTerm, out double secondNumber))
             {
@@ -86,7 +86,7 @@
         /// <param name="firstTerm">Первое целое число для умножения.</param>
         /// <param name="secondTerm">Второе целое число для умножения.</param>
         /// <returns>Результат умножения двух целых чисел.</returns>
-        public double Multiply(int firstTerm, int secondTerm)
+        public static double Multiply(int firstTerm, int secondTerm)
         {
             return firstTerm * secondTerm;
         }
@@ -96,7 +96,7 @@
         /// <param name="firstTerm">Первое число для умножения.</param>
         /// <param name="secondTerm">Второе число для умножения.</param>
         /// <returns>Результат умножения двух чисел.</returns>
-        public double Multiply(double firstTerm, double secondTerm)
+        public static double Multiply(double firstTerm, double secondTerm)
         {
             return firstTerm * secondTerm;
         }
@@ -107,7 +107,7 @@
         /// <param name="secondTerm">Второе число в виде строки.</param>
         /// <returns>Результат умножения двух чисел.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если хотя бы одно из входных значений не является допустимым числом.</exception>
-        public double Multiply(string firstTerm, string secondTerm)
+        public static double Multiply(string firstTerm, string secondTerm)
         {
             if (double.TryParse(firstTerm, out double firstNumber) && double.TryParse(secondTerm, out double secondNumber))
             {
@@ -126,7 +126,7 @@
         /// <param name="secondTerm">Второе число (делитель).</param>
         /// <returns>Результат деления первого числа на второе.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если делитель равен нулю.</exception>
-        public double Devide(int firstTerm, int secondTerm)
+        public static double Devide(int firstTerm, int secondTerm)
         {
             if(firstTerm == 0 || secondTerm == 0)
             {
@@ -144,7 +144,7 @@
         /// <param name="secondTerm">Второе число (делитель).</param>
         /// <returns>Результат деления первого числа на второе.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если делитель равен нулю.</exception>
-        public double Devide(double firstTerm, double secondTerm)
+        public static double Devide(double firstTerm, double secondTerm)
         {
             if (firstTerm == 0 || secondTerm == 0)
             {
@@ -162,7 +162,7 @@
         /// <param name="secondTerm">Второе число (делитель).</param>
         /// <returns>Результат деления первого числа на второе.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если входные данные некорректны или если делитель равен нулю.</exception>
-        public double Divide(string firstTerm, string secondTerm)
+        public static double Devide(string firstTerm, string secondTerm)
         {
             if (double.TryParse(firstTerm, out double firstNumber) && double.TryParse(secondTerm, out double secondNumber))
             {
@@ -188,7 +188,7 @@
         /// <param name="exponention">Степень (число, на которое нужно возвести основание).</param>
         /// <returns>Результат возведения в степень.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если основание равно нулю и степень отрицательная.</exception>
-        public double Power(int term, int exponention)
+        public static double Power(int term, int exponention)
         {
             if (exponention == 0)
             {
@@ -218,7 +218,7 @@
         /// <param name="exponention">Степень (число, на которое нужно возвести основание). Может быть отрицательным.</param>
         /// <returns>Результат возведения в степень.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если степень является бесконечностью или NaN.</exception>
-        public double Power(double term, double exponention)
+        public static double Power(double term, double exponention)
         {
             if (double.IsInfinity(exponention) || double.IsNaN(exponention))
             {
@@ -243,7 +243,7 @@
         /// <param name="exponention">Степень (число, на которое нужно возвести основание).</param>
         /// <returns>Результат возведения в степень.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если входные строки не могут быть преобразованы в числа.</exception>
-        public double Power(string term, string exponention)
+        public static double Power(string term, string exponention)
         {
             if (double.TryParse(term, out double firstNumber) && double.TryParse(exponention, out double secondNumber))
             {
@@ -266,7 +266,7 @@
         /// <param name="tolerance">Допустимая погрешность для вычисления. По умолчанию 1e-10.</param>
         /// <returns>Квадратный корень из заданного числа.</returns>
         /// <exception cref="ArgumentException">Выбрасывается, если заданное число меньше нуля.</exception>
-        public double Sqrt(double number, double tolerance = 1e-10)
+        public static double Sqrt(double number, double tolerance = 1e-10)
         {
             if (number < 0)
             {

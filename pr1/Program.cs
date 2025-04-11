@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using lib1;
 public class Program
 {
     const double pi = 3.14;
@@ -119,6 +120,12 @@ public class Program
         int counter = 0;
         while (rand_3grade > 1)
         {
+            if (rand_3grade / 3 == 1)
+            {
+                counter++;
+                Console.WriteLine($"{rand_3grade} is {counter}-th grade of 3 value");
+                rand_3grade = rand_3grade / 3;
+            }
             if (rand_3grade % 3 == 0)
             {
                 rand_3grade = rand_3grade / 3;
@@ -130,45 +137,37 @@ public class Program
                 Console.WriteLine($"{rand_3grade} is not the grade of 3!");
                 break;
             }
-            if (rand_3grade / 3 == 1)
-            {
-                counter++;
-                Console.WriteLine($"{rand_3grade} is {counter}-th grade of 3 value");
-                rand_3grade = rand_3grade / 3;
-            }
         }
 
+        Random rnd = new Random();
         int[] arr2 = new int[5];
         int result2 = 0;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < arr2.Length; i++)
         {
-            arr2[i] = rand.Next(-10, 10);
+            arr2[i] = rnd.Next(-10, 10);
             result2 += arr2[i];
             Console.WriteLine(arr2[i]);
         }
-        Console.WriteLine($"Result of sum of this array is {result2}");
+        Console.WriteLine("Сумма элементов массива: " + result2);
 
         int rand_int1 = rand.Next(-1, 1);
         int rand_int2 = rand.Next(-1, 1);
         Console.WriteLine($"Result: {SignIn(rand_int1) + SignIn(rand_int2)}");
+        testLib(4, 5);
     }
-
-    public class Kata
+    public List<string> wave(string str)
     {
-        public List<string> wave(string str)
+        List<string> result_list = new List<string>();
+        for (int i = 0; i < str.Length; i++)
         {
-            List<string> result_list = new List<string>();
-            for (int i = 0; i < str.Length; i++)
+            if (char.IsLetter(str[i]))
             {
-                if (char.IsLetter(str[i]))
-                {
-                    char[] symbols = str.ToCharArray();
-                    symbols[i] = char.ToUpper(symbols[i]);
-                    result_list.Add(new string(symbols));
-                }
+                char[] symbols = str.ToCharArray();
+                symbols[i] = char.ToUpper(symbols[i]);
+                result_list.Add(new string(symbols));
             }
-            return result_list;
         }
+        return result_list;
     }
 
     public static string Rot13(string message)
@@ -347,5 +346,15 @@ public class Program
         Array.Sort(digits);
         Array.Reverse(digits);
         return int.Parse(new string(digits));
+    }
+
+    public static void testLib(double temp1, double temp2)
+    {
+        Console.WriteLine($"Sum:{MathFunctions.Add(temp1, temp2)}");
+        Console.WriteLine($"Sum:{MathFunctions.Substract(temp1, temp2)}");
+        Console.WriteLine($"Sum:{MathFunctions.Multiply(temp1, temp2)}");
+        Console.WriteLine($"Sum:{MathFunctions.Devide(temp1, temp2)}");
+        Console.WriteLine($"Sum:{MathFunctions.Power(temp1, temp2)}");
+        Console.WriteLine($"Sum:{MathFunctions.Sqrt(temp1, temp2)}");
     }
 }
