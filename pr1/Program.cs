@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 public class Program
 {
     const double pi = 3.14;
@@ -150,5 +151,201 @@ public class Program
         int rand_int1 = rand.Next(-1, 1);
         int rand_int2 = rand.Next(-1, 1);
         Console.WriteLine($"Result: {SignIn(rand_int1) + SignIn(rand_int2)}");
+    }
+
+    public class Kata
+    {
+        public List<string> wave(string str)
+        {
+            List<string> result_list = new List<string>();
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (char.IsLetter(str[i]))
+                {
+                    char[] symbols = str.ToCharArray();
+                    symbols[i] = char.ToUpper(symbols[i]);
+                    result_list.Add(new string(symbols));
+                }
+            }
+            return result_list;
+        }
+    }
+
+    public static string Rot13(string message)
+    {
+        string result = "";
+        foreach (var s in message)
+        {
+            if ((s >= 'a' && s <= 'm') || (s >= 'A' && s <= 'M'))
+                result += Convert.ToChar((s + 13)).ToString();
+            else if ((s >= 'n' && s <= 'z') || (s >= 'N' && s <= 'Z'))
+                result += Convert.ToChar((s - 13)).ToString();
+            else result += s;
+        }
+        return result;
+    }
+
+    public static string Order(string words)
+    {
+        string[] words_arr = words.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var orderedWords = words_arr.OrderBy(word => word.FirstOrDefault(char.IsDigit)).ToArray();
+        return string.Join(" ", orderedWords);
+    }
+
+    public static int Persistence(long n)
+    {
+        string str_n = n.ToString();
+        int counter = 0;
+        if (str_n.Length == 1)
+        {
+            return 0;
+        }
+        while (str_n.Length > 1)
+        {
+            counter++;
+            int[] numbers = str_n.Select(c => (int)char.GetNumericValue(c)).ToArray();
+            n = 1;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                n *= numbers[i];
+            }
+            str_n = n.ToString();
+        }
+        return counter;
+    }
+
+    public static string FirstNonRepeatingLetter(string s)
+    {
+        foreach (char c in s)
+        {
+            if (s.Count(x => char.ToLower(x) == char.ToLower(c)) == 1)
+            {
+                return c.ToString();
+            }
+        }
+
+        return "";
+    }
+
+    public static string Likes(string[] name)
+    {
+        if (name.Length == 0)
+        {
+            return "no one likes this";
+        }
+        else if (name.Length == 1)
+        {
+            string cur_name = new string(name[0]);
+            return $"{cur_name} likes this";
+        }
+        else if (name.Length == 2)
+        {
+            string cur_name1 = new string(name[0]);
+            string cur_name2 = new string(name[1]);
+            return $"{cur_name1} and {cur_name2} like this";
+        }
+        else if (name.Length == 3)
+        {
+            string cur_name1 = new string(name[0]);
+            string cur_name2 = new string(name[1]);
+            string cur_name3 = new string(name[2]);
+            return $"{cur_name1}, {cur_name2} and {cur_name3} like this";
+        }
+        else
+        {
+            string cur_name1 = new string(name[0]);
+            string cur_name2 = new string(name[1]);
+            return $"{cur_name1}, {cur_name2} and {name.Length - 2} others like this";
+        }
+    }
+
+    public static string SpinWords(string str)
+    {
+        char[] separators = new char[] { ' ' };
+        string[] words = str.Split(separators, StringSplitOptions.None);
+        string result_str = "";
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (words[i].Length >= 5)
+            {
+                char[] current_array = words[i].ToCharArray();
+                Array.Reverse(current_array);
+                string cur_res = new string(current_array);
+                result_str += cur_res;
+                if (i < words.Length - 1)
+                {
+                    result_str += ' ';
+                }
+            }
+            else
+            {
+                result_str += words[i];
+                if (i < words.Length - 1)
+                {
+                    result_str += ' ';
+                }
+            }
+        }
+        return result_str;
+    }
+
+    public static string ReverseWords(string str)
+    {
+        char[] separators = new char[] { ' ' };
+        string[] words = str.Split(separators, StringSplitOptions.None);
+        string result_str = "";
+        for (int i = 0; i < words.Length; i++)
+        {
+            char[] current_array = words[i].ToCharArray();
+            Array.Reverse(current_array);
+            string current_res = new string(current_array);
+            result_str += current_res;
+            if (i < words.Length - 1)
+            {
+                result_str += " ";
+            }
+        }
+        return result_str;
+    }
+
+    public static bool ValidatePin(string pin)
+    {
+        foreach (char c in pin)
+        {
+            if (!char.IsDigit(c))
+            {
+                return false;
+            }
+        }
+        if (pin.Length != 6 && pin.Length != 4)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public static int GetVowelCount(string str)
+    {
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+        int vowelCount = 0;
+        foreach (char c in str.ToLower())
+        {
+            if (Array.Exists(vowels, element => element == c))
+            {
+                vowelCount++;
+            }
+        }
+        return vowelCount;
+    }
+
+    public static int DescendingOrder(int num)
+    {
+        char[] digits = num.ToString().ToCharArray();
+        Array.Sort(digits);
+        Array.Reverse(digits);
+        return int.Parse(new string(digits));
     }
 }
