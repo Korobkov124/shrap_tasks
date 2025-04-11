@@ -3,32 +3,32 @@
     public class MathFunctions
     {
         /// <summary>
-        /// 
+        /// Вычисляет сумму двух целых чисел.
         /// </summary>
-        /// <param name="firstTerm"></param>
-        /// <param name="secondTerm"></param>
-        /// <returns></returns>
+        /// <param name="firstTerm">Первое целое число для сложения.</param>
+        /// <param name="secondTerm">Второе целое число для сложения.</param>
+        /// <returns>Сумма первого и второго числа.</returns>
         public double Add(int firstTerm, int secondTerm)
         {
             return firstTerm + secondTerm;
         }
         /// <summary>
-        /// 
+        /// Вычисляет сумму двух чисел.
         /// </summary>
-        /// <param name="firstTerm"></param>
-        /// <param name="secondTerm"></param>
-        /// <returns></returns>
+        /// <param name="firstTerm">Первое число для сложения.</param>
+        /// <param name="secondTerm">Второе число для сложения.</param>
+        /// <returns>Сумма первого и второго числа.</returns>
         public double Add(double firstTerm, double secondTerm)
         {
             return firstTerm + secondTerm;
         }
         /// <summary>
-        /// 
+        /// Вычисляет сумму двух чисел, заданных в виде строк.
         /// </summary>
-        /// <param name="firstTerm"></param>
-        /// <param name="secondTerm"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
+        /// <param name="firstTerm">Первая строка, представляющая число.</param>
+        /// <param name="secondTerm">Вторая строка, представляющая число.</param>
+        /// <returns>Сумма двух чисел в виде числа с плавающей запятой.</returns>
+        /// <exception cref="ArgumentException">Выбрасывается, если один из параметров не может быть преобразован в число.</exception>
         public double Add(string firstTerm, string secondTerm)
         {
             if (double.TryParse(firstTerm, out double firstNumber) && double.TryParse(secondTerm, out double secondNumber))
@@ -42,11 +42,11 @@
             }
         }
         /// <summary>
-        /// 
+        /// Вычисляет разность между двумя целыми числами.
         /// </summary>
-        /// <param name="firstTerm"></param>
-        /// <param name="secondTerm"></param>
-        /// <returns></returns>
+        /// <param name="firstTerm">Первое целое число, от которого вычитается второе.</param>
+        /// <param name="secondTerm">Второе целое число, которое вычитается из первого.</param>
+        /// <returns>Результат вычитания второго числа из первого.</returns>
         public double Substract(int firstTerm, int secondTerm)
         {
             return firstTerm - secondTerm;
