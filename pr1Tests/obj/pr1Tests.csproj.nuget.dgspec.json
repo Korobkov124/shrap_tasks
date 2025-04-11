@@ -71,7 +71,7 @@
         "projectName": "pr1Tests",
         "projectPath": "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
         "packagesPath": "C:\\Users\\HONOR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1Tests\\obj\\",
+        "outputPath": "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
