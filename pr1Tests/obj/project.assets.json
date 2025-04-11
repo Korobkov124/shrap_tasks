@@ -1789,9 +1789,22 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "lib1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/lib1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/lib1.dll": {}
+        }
+      },
       "pr1/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "lib1": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/pr1.dll": {}
         },
@@ -6336,6 +6349,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "lib1/1.0.0": {
+      "type": "project",
+      "path": "../lib1/lib1.csproj",
+      "msbuildProject": "../lib1/lib1.csproj"
+    },
     "pr1/1.0.0": {
       "type": "project",
       "path": "../pr1/pr1.csproj",
@@ -6358,9 +6376,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
+      "projectUniqueName": "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
       "projectName": "pr1Tests",
-      "projectPath": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
+      "projectPath": "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1Tests\\pr1Tests.csproj",
       "packagesPath": "C:\\Users\\HONOR\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1Tests\\obj\\",
       "projectStyle": "PackageReference",
@@ -6384,8 +6402,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1\\pr1.csproj": {
-              "projectPath": "C:\\Users\\HONOR\\Source\\Repos\\shrap_tasks\\pr1\\pr1.csproj"
+            "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1\\pr1.csproj": {
+              "projectPath": "C:\\Users\\HONOR\\source\\repos\\shrap_tasks\\pr1\\pr1.csproj"
             }
           }
         }
