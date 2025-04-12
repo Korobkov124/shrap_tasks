@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>lib1</name>
+    </assembly>
+    <members>
+        <member name="M:lib1.MathFunctions.Add(System.Int32,System.Int32)">
+            <summary>
+            Вычисляет сумму двух целых чисел.
+            </summary>
+            <param name="firstTerm">Первое целое число для сложения.</param>
+            <param name="secondTerm">Второе целое число для сложения.</param>
+            <returns>Сумма первого и второго числа.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Add(System.Double,System.Double)">
+            <summary>
+            Вычисляет сумму двух чисел.
+            </summary>
+            <param name="firstTerm">Первое число для сложения.</param>
+            <param name="secondTerm">Второе число для сложения.</param>
+            <returns>Сумма первого и второго числа.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Add(System.String,System.String)">
+            <summary>
+            Вычисляет сумму двух чисел, заданных в виде строк.
+            </summary>
+            <param name="firstTerm">Первая строка, представляющая число.</param>
+            <param name="secondTerm">Вторая строка, представляющая число.</param>
+            <returns>Сумма двух чисел в виде числа с плавающей запятой.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если один из параметров не может быть преобразован в число.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Substract(System.Int32,System.Int32)">
+            <summary>
+            Вычисляет разность между двумя целыми числами.
+            </summary>
+            <param name="firstTerm">Первое целое число, от которого вычитается второе.</param>
+            <param name="secondTerm">Второе целое число, которое вычитается из первого.</param>
+            <returns>Результат вычитания второго числа из первого.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Substract(System.Double,System.Double)">
+            <summary>
+            Вычисляет разность между двумя числами.
+            </summary>
+            <param name="firstTerm">Первое число, от которого вычитается второе.</param>
+            <param name="secondTerm">Второе число, которое вычитается из первого.</param>
+            <returns>Результат вычитания второго числа из первого.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Substract(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="firstTerm"></param>
+            <param name="secondTerm"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Multiply(System.Int32,System.Int32)">
+            <summary>
+            Умножает два целых числа.
+            </summary>
+            <param name="firstTerm">Первое целое число для умножения.</param>
+            <param name="secondTerm">Второе целое число для умножения.</param>
+            <returns>Результат умножения двух целых чисел.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Multiply(System.Double,System.Double)">
+            <summary>
+            Умножает два числа.
+            </summary>
+            <param name="firstTerm">Первое число для умножения.</param>
+            <param name="secondTerm">Второе число для умножения.</param>
+            <returns>Результат умножения двух чисел.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.Multiply(System.String,System.String)">
+            <summary>
+            Умножает два числа, представленные в виде строк.
+            </summary>
+            <param name="firstTerm">Первое число в виде строки.</param>
+            <param name="secondTerm">Второе число в виде строки.</param>
+            <returns>Результат умножения двух чисел.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если хотя бы одно из входных значений не является допустимым числом.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Devide(System.Int32,System.Int32)">
+            <summary>
+            Выполняет деление двух целых чисел.
+            </summary>
+            <param name="firstTerm">Первое число (делимое).</param>
+            <param name="secondTerm">Второе число (делитель).</param>
+            <returns>Результат деления первого числа на второе.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если делитель равен нулю.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Devide(System.Double,System.Double)">
+            <summary>
+            Выполняет деление двух чисел.
+            </summary>
+            <param name="firstTerm">Первое число (делимое).</param>
+            <param name="secondTerm">Второе число (делитель).</param>
+            <returns>Результат деления первого числа на второе.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если делитель равен нулю.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Devide(System.String,System.String)">
+            <summary>
+            Выполняет деление двух чисел, представленных в виде строк.
+            </summary>
+            <param name="firstTerm">Первое число (делимое).</param>
+            <param name="secondTerm">Второе число (делитель).</param>
+            <returns>Результат деления первого числа на второе.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если входные данные некорректны или если делитель равен нулю.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Power(System.Int32,System.Int32)">
+            <summary>
+            Возвращает значение первого числа, возведенного в степень второго числа.
+            </summary>
+            <param name="term">Основание степени (число, которое нужно возвести в степень).</param>
+            <param name="exponention">Степень (число, на которое нужно возвести основание).</param>
+            <returns>Результат возведения в степень.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если основание равно нулю и степень отрицательная.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Power(System.Double,System.Double)">
+            <summary>
+            Возвращает значение первого числа, возведенного в степень второго числа.
+            </summary>
+            <param name="term">Основание степени (число, которое нужно возвести в степень).</param>
+            <param name="exponention">Степень (число, на которое нужно возвести основание). Может быть отрицательным.</param>
+            <returns>Результат возведения в степень.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если степень является бесконечностью или NaN.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Power(System.String,System.String)">
+            <summary>
+            Возвращает значение первого числа, возведенного в степень второго числа.
+            </summary>
+            <param name="term">Основание степени (число, которое нужно возвести в степень).</param>
+            <param name="exponention">Степень (число, на которое нужно возвести основание).</param>
+            <returns>Результат возведения в степень.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если входные строки не могут быть преобразованы в числа.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.Sqrt(System.Double,System.Double)">
+            <summary>
+            Вычисляет квадратный корень заданного числа с заданной точностью.
+            </summary>
+            <param name="number">Число, из которого необходимо извлечь квадратный корень.</param>
+            <param name="tolerance">Допустимая погрешность для вычисления. По умолчанию 1e-10.</param>
+            <returns>Квадратный корень из заданного числа.</returns>
+            <exception cref="T:System.ArgumentException">Выбрасывается, если заданное число меньше нуля.</exception>
+        </member>
+        <member name="M:lib1.MathFunctions.SuperSum(System.Int32,System.Int32)">
+            <summary>
+            Склеивает два целых числа и возвращает их значение как число с плавающей запятой.
+            </summary>
+            <param name="firstTerm">Первый целый термин.</param>
+            <param name="secondTerm">Второй целый термин.</param>
+            <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.SuperSum(System.Double,System.Double)">
+            <summary>
+            Склеивает два числа с плавающей запятой и возвращает их значение как число с плавающей запятой.
+            </summary>
+            <param name="firstTerm">Первый термин с плавающей запятой.</param>
+            <param name="secondTerm">Второй термин с плавающей запятой.</param>
+            <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        </member>
+        <member name="M:lib1.MathFunctions.SuperSum(System.String,System.String)">
+            <summary>
+            Склеивает два строковых значения и возвращает их значение как число с плавающей запятой.
+            </summary>
+            <param name="firstTerm">Первый строковый термин.</param>
+            <param name="secondTerm">Второй строковый термин.</param>
+            <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        </member>
+    </members>
+</doc>

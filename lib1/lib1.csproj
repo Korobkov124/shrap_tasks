@@ -1,9 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>Korobkovs_Library</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Andrey Korobkov</Authors>
+    <Company>SibFU</Company>
+    <Description>An awesome library that does amazing things</Description>
+    <PackageTags>awesome;utility;tools</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Korobkov124/shrap_tasks</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin$(Configuration)$(TargetFramework)$(PackageId).xml</DocumentationFile>
   </PropertyGroup>
-
 </Project>

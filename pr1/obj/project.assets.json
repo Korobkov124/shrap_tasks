@@ -2,20 +2,20 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "lib1/1.0.0": {
+      "Korobkovs_Library/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/lib1.dll": {}
+          "bin/placeholder/Korobkovs_Library.dll": {}
         },
         "runtime": {
-          "bin/placeholder/lib1.dll": {}
+          "bin/placeholder/Korobkovs_Library.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "lib1/1.0.0": {
+    "Korobkovs_Library/1.0.0": {
       "type": "project",
       "path": "../lib1/lib1.csproj",
       "msbuildProject": "../lib1/lib1.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "lib1 >= 1.0.0"
+      "Korobkovs_Library >= 1.0.0"
     ]
   },
   "packageFolders": {

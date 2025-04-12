@@ -11,7 +11,7 @@ namespace Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void MainTest()
+        public void MainTest()  
         {
             Assert.Fail();
         }

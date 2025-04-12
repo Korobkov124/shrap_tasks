@@ -1,4 +1,5 @@
-﻿namespace lib1
+﻿using System;
+namespace lib1
 {
     public class MathFunctions
     {
@@ -284,5 +285,43 @@
             }
             return guess;
         }
+        /// <summary>
+        /// Склеивает два целых числа и возвращает их значение как число с плавающей запятой.
+        /// </summary>
+        /// <param name="firstTerm">Первый целый термин.</param>
+        /// <param name="secondTerm">Второй целый термин.</param>
+        /// <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        public static double SuperSum(int firstTerm, int secondTerm)
+        {
+            string parsed_firstTerm = firstTerm.ToString();
+            string parsed_secondTerm = secondTerm.ToString();
+            double result = double.Parse(parsed_firstTerm + parsed_secondTerm);
+            return result;
+        }
+        /// <summary>
+        /// Склеивает два числа с плавающей запятой и возвращает их значение как число с плавающей запятой.
+        /// </summary>
+        /// <param name="firstTerm">Первый термин с плавающей запятой.</param>
+        /// <param name="secondTerm">Второй термин с плавающей запятой.</param>
+        /// <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        public static double SuperSum(double firstTerm, double secondTerm)
+        {
+            string parsed_firstTerm = firstTerm.ToString();
+            string parsed_secondTerm = secondTerm.ToString();
+            double result = double.Parse(parsed_firstTerm + parsed_secondTerm);
+            return result;
+        }
+        /// <summary>
+        /// Склеивает два строковых значения и возвращает их значение как число с плавающей запятой.
+        /// </summary>
+        /// <param name="firstTerm">Первый строковый термин.</param>
+        /// <param name="secondTerm">Второй строковый термин.</param>
+        /// <returns>Склеенное значение двух терминов в виде числа с плавающей запятой.</returns>
+        public static double SuperSum(string firstTerm, string secondTerm)
+        {
+            double result = double.Parse(firstTerm + secondTerm);
+            return result;
+        }
+        public static double Calculator(string str) { return 0; }
     }
 }
